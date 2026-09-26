@@ -44,7 +44,7 @@ export function Modal({
       onClick={onClose}
     >
       <div
-        className={`w-full sm:${wide ? "max-w-2xl" : "max-w-lg"} rounded-t-2xl sm:rounded-xl animate-slide-up flex flex-col`}
+        className={`w-full ${wide ? "sm:max-w-2xl" : "sm:max-w-lg"} rounded-t-2xl sm:rounded-xl animate-slide-up flex flex-col`}
         style={{
           maxHeight: "92vh",
           border: "1px solid var(--color-border)",
