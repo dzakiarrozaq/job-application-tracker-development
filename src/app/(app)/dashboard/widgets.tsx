@@ -137,7 +137,7 @@ export function DashboardStatCards({
         })}
       </div>
 
-      <Modal open={showRejection} onClose={() => setShowRejection(false)}>
+      <Modal open={showRejection} onClose={() => setShowRejection(false)} title="Analisis Penolakan">
         <RejectionAnalysisCard insights={analytics.rejectionInsights} />
       </Modal>
     </>

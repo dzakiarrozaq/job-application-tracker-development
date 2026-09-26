@@ -8,36 +8,13 @@ import { users } from "@/db/schema";
 import { eq } from "drizzle-orm";
 import { verifyPassword } from "@/lib/password";
 import { ensureDefaultPipelines } from "@/lib/seed";
-import { Resend } from "resend";
+// import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 async function sendWelcomeEmail(name: string, email: string) {
-  try {
-    const { data, error } = await resend.emails.send({
-      from: "PushToOffer <onboarding@resend.dev>",
-      to: email,
-      subject: "Selamat Datang di PushToOffer! 🎉",
-      html: `
-        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; color: #333;">
-          <h1 style="color: #4285F4;">Halo ${name}!</h1>
-          <p>Terima kasih telah mendaftar di <strong>PushToOffer</strong> - asisten pribadi Anda untuk melacak lamaran pekerjaan.</p>
-          <p>Kami telah menyiapkan papan Kanban otomatis untuk Anda. Silakan tambahkan lamaran pertama Anda hari ini!</p>
-          <br/>
-          <p>Salam sukses,</p>
-          <p><strong>Tim PushToOffer</strong></p>
-        </div>
-      `,
-    });
-
-    if (error) {
-      console.error("[RESEND ERROR]", error);
-    } else {
-      console.log("[RESEND SUCCESS] Email terkirim dengan ID:", data?.id);
-    }
-  } catch (error) {
-    console.error("[RESEND CATCH ERROR]", error);
-  }
+  // Resend email di-disable sementara sesuai permintaan.
+  console.log("[EMAIL DISABLED] Welcome email untuk:", email);
 }
 
 const providers: Provider[] = [
