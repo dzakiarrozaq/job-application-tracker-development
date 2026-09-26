@@ -37,8 +37,7 @@ export function Modal({
     <div
       className="fixed inset-0 z-50 flex items-end sm:items-start sm:justify-center sm:px-4 sm:py-8 animate-fade-in"
       style={{
-        backgroundColor: "rgba(0,0,0,0.4)",
-        backdropFilter: "blur(4px)",
+        backgroundColor: "rgba(0,0,0,0.6)",
         overflowY: "auto",
       }}
       onClick={onClose}

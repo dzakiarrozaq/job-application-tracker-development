@@ -157,7 +157,6 @@ export function AppShell({
         style={{
           backgroundColor: "var(--color-surface)",
           borderTop: "1px solid var(--color-border)",
-          backdropFilter: "blur(16px)",
         }}
       >
         {BOTTOM_NAV_ITEMS.map((item) => {
@@ -195,7 +194,7 @@ export function AppShell({
       {moreOpen && (
         <div
           className="fixed inset-0 z-50 flex items-end lg:hidden animate-fade-in"
-          style={{ backgroundColor: "rgba(0,0,0,0.4)", backdropFilter: "blur(4px)" }}
+          style={{ backgroundColor: "rgba(0,0,0,0.6)" }}
           onClick={() => setMoreOpen(false)}
         >
           <MoreSheet user={user} pathname={pathname} onClose={() => setMoreOpen(false)} />
