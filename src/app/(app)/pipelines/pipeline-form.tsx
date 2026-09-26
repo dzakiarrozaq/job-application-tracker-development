@@ -74,7 +74,7 @@ export function PipelineForm({
 
       <label className="block">
         <span className="mb-1 block text-sm font-medium" style={{ color: "var(--color-text-secondary)" }}>
-          Nama Pipeline
+          Nama Alur Tahapan
         </span>
         <input name="name" defaultValue={initial?.name} required className="input" placeholder="cth. Lamaran BUMN" />
       </label>
@@ -210,7 +210,7 @@ export function PipelineForm({
           Batal
         </button>
         <button type="submit" disabled={pending} className="btn-primary">
-          {pending ? "Menyimpan..." : initial ? "Simpan Perubahan" : "Buat Pipeline"}
+          {pending ? "Menyimpan..." : initial ? "Simpan Perubahan" : "Buat Alur Tahapan"}
         </button>
       </div>
     </form>

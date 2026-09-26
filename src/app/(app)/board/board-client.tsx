@@ -140,7 +140,7 @@ export function BoardClient({
         ))}
         {pipelines.length === 0 && (
           <p className="text-sm" style={{ color: "var(--color-text-placeholder)" }}>
-            Belum ada pipeline. Buat pipeline terlebih dahulu di halaman Pipeline.
+            Belum ada alur tahapan. Buat alur tahapan terlebih dahulu di halaman Alur Tahapan.
           </p>
         )}
       </div>
@@ -225,7 +225,7 @@ export function BoardClient({
             ))}
             {boardApps.length === 0 && (
               <p className="text-sm" style={{ color: "var(--color-text-placeholder)" }}>
-                Belum ada lamaran pada pipeline ini.
+                Belum ada lamaran pada alur tahapan ini.
               </p>
             )}
           </div>

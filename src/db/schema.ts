@@ -153,3 +153,18 @@ export const applicationDocuments = pgTable("application_documents", {
     table.documentId,
   ),
 }));
+
+// ---------------------------------------------------------------------------
+// Interview Prep Checklist
+// ---------------------------------------------------------------------------
+
+export const interviewPrepItems = pgTable("interview_prep_items", {
+  id: text("id").primaryKey().$defaultFn(genId),
+  applicationId: text("application_id")
+    .notNull()
+    .references(() => applications.id, { onDelete: "cascade" }),
+  text: text("text").notNull(),
+  completed: boolean("completed").notNull().default(false),
+  sortOrder: integer("sort_order").notNull().default(0),
+  createdAt: timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+});

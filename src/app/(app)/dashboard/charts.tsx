@@ -88,7 +88,7 @@ export function PipelineBarChart({ data }: { data: AnalyticsData["pipelineBreakd
   const textColor = theme === "dark" ? "#a8a5a0" : "#6b6762";
 
   if (data.every((d) => d.total === 0)) {
-    return <EmptyState label="Belum ada lamaran per pipeline." />;
+    return <EmptyState label="Belum ada lamaran per alur tahapan." />;
   }
   return (
     <ResponsiveContainer width="100%" height={260}>

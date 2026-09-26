@@ -169,7 +169,7 @@ export default async function HomePage() {
           {[
             {
               icon: <GitMerge className="h-5 w-5" style={{ color: "var(--color-text)" }} />,
-              title: "Pipeline Kustom",
+              title: "Alur Tahapan Kustom",
               desc: "Buat alur seleksimu sendiri atau pilih template yang sudah tersedia: Corporate, CPNS, Akademi.",
             },
             {

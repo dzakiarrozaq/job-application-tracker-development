@@ -24,7 +24,7 @@ export function PipelinesClient({ pipelines }: { pipelines: PipelineWithStages[]
   }
 
   async function handleDelete(id: string) {
-    if (!confirm("Yakin ingin menghapus pipeline ini beserta seluruh tahapannya?")) return;
+    if (!confirm("Yakin ingin menghapus alur tahapan ini beserta seluruh itemnya?")) return;
     const res = await deletePipeline(id);
     if (res.error) {
       setError(res.error);
@@ -38,14 +38,14 @@ export function PipelinesClient({ pipelines }: { pipelines: PipelineWithStages[]
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
           <h1 className="text-xl font-semibold" style={{ color: "var(--color-text)" }}>
-            Pipeline
+            Alur Tahapan
           </h1>
           <p className="mt-1 text-sm" style={{ color: "var(--color-text-secondary)" }}>
             Sesuaikan alur tahapan seleksi untuk tiap jenis lamaran.
           </p>
         </div>
         <button onClick={openCreate} className="btn-primary">
-          Buat Pipeline
+          Buat Alur Tahapan
         </button>
       </div>
 
@@ -116,7 +116,7 @@ export function PipelinesClient({ pipelines }: { pipelines: PipelineWithStages[]
       <Modal
         open={formOpen}
         onClose={() => setFormOpen(false)}
-        title={editing ? "Edit Pipeline" : "Buat Pipeline Baru"}
+        title={editing ? "Edit Alur Tahapan" : "Buat Alur Tahapan Baru"}
         wide
       >
         <PipelineForm

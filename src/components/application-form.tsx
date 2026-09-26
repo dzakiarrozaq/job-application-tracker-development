@@ -64,7 +64,7 @@ export function ApplicationForm({
             defaultValue={initial?.company}
             required
             className="input"
-            placeholder="cth. Edrus Group"
+            placeholder="cth. PT Pertamina"
           />
         </Field>
         <Field label="Posisi">
@@ -115,7 +115,7 @@ export function ApplicationForm({
           <Field label="Jadwal Tes / Wawancara (Opsional)">
             <DatePicker
               selected={interviewDate}
-              onChange={(date) => setInterviewDate(date)}
+              onChange={(date: Date | null) => setInterviewDate(date)}
               showTimeSelect
               timeFormat="HH:mm"
               timeIntervals={15}
@@ -136,12 +136,12 @@ export function ApplicationForm({
 
       {pipelines.length === 0 ? (
         <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/50 dark:text-amber-200">
-          <p className="text-sm font-medium">Pipeline Kosong</p>
-          <p className="mt-1 text-xs">Anda belum memiliki pipeline. Silakan buat pipeline terlebih dahulu di menu Pipeline agar bisa menambah lamaran.</p>
+          <p className="text-sm font-medium">Alur Tahapan Kosong</p>
+          <p className="mt-1 text-xs">Anda belum memiliki alur tahapan. Silakan buat alur tahapan terlebih dahulu di menu Alur Tahapan agar bisa menambah lamaran.</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <Field label="Pipeline">
+          <Field label="Alur Tahapan">
             <select
               name="pipelineId"
               value={pipelineId}
